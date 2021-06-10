@@ -10,7 +10,7 @@ async function request(method,url,search = '',body=null){
             const data = await response.json().catch(error=>{console.error(error)})
             
             if(search!=''){
-                createCards(data.filter(user=>user['name'] == search))
+                createCards(data.filter(user=>user['name'].includes(search)))
             }else{
                 createCards(data);
             }
