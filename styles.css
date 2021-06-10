@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --btn-color-light:rgb(0, 128, 255);
+    --btn-color-hover:rgb(255, 0, 98);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    outline: none;
+    border: 0;
+}
+
+.search {
+    padding-top: 10vh;
+
+}
+
+.search input{
+    border-bottom: 1px solid #ccc;
+    width: 40%;
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+button{
+    background: #fff;
+}
+
+.search button{
+    margin-left: 20px;
+    border: 1px solid var(--btn-color-light);
+    border-radius: 5px;
+    padding: 4px 8px;
+    color: var(--btn-color-light);
+    font-size: 18px;
+    transition:all 0.3s ease;
+}
+
+.search button:hover{
+    color: var(--btn-color-hover);
+    border:1px solid var(--btn-color-hover);
+}
+
+.search button:active{
+    background-color: var(--btn-color-hover);
+    border:1px solid var(--btn-color-hover);
+    color: white;
+}
+
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+.card {
+    background-color:rgb(234, 245, 255);
+    border:1px solid var(--btn-color-light);
+    border-radius: 15px;
+    margin: 20px 0;
+  
+}
+
+.card-info{
+    padding: 10px 20px;
+}
+
+.card-info h1{
+    color: var(--btn-color-hover);
+}
+
+.card-info p{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: rgb(54, 153, 167);
+}
+
+
+.card img{
+    width: 240px;
+    
+}
