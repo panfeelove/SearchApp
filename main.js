@@ -28,8 +28,18 @@ class Card extends Component{
         });
         this.name = options.name;
         this.email = options.email;
+        this.id = options.id;
 
-        this.photo = document.createElement('img');
+        
+
+    }
+
+        this.setImg("https://robohash.org/" + this.id + "sold" + "?set=set3");
+        this.setContent();
+        
+    }
+
+    setContent(){
         this.info = document.createElement('div');
         this.info.classList.add('card-info');
         this.title = document.createElement('h1');
@@ -41,12 +51,10 @@ class Card extends Component{
         this.info.appendChild(this.subtitle);
         this.$el.appendChild(this.photo);
         this.$el.appendChild(this.info);
-
     }
 
-
-
     setImg(src){
+        this.photo = document.createElement('img');
         this.photo.setAttribute("src" , src);
     }
 }
@@ -57,15 +65,14 @@ function createCards(data,index = null){
         cards.forEach(card=>card.remove())
     }
 
-    console.log(data.length)
-    const users = data.filter(user => user['name'] == 'Ervin Howell');
     for(let i = 0; i<data.length;i++){
         const card = new Card({
             name:data[i]['name'],
-            email:data[i]['email']
+            email:data[i]['email'],
+            id:data[i]['id']
 
         })
-        card.setImg("https://robohash.org/"+ Math.random() + i + "sold" + "?set=set3")
+        card.load();
     }
 }
 
